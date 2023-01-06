@@ -1,0 +1,108 @@
+@import './layout/flex.css';
+@import './layout/scroll.css';
+@import './base/base.css';
+@import './base/typo.css';
+@import './components/title-bar.css';
+@import './components/side-bar.css';
+@import './components/editor.css';
+@import './components/buttons.css';
+@import './components/search.css';
+@import './animation/animation.css';
+@import './dist/codemirror/theme.min.css';
+@import './markdown-theme/github-markdown.css';
+@import './components/rename.css';
+@import './components/editor-theme.css';
+@import './components/loading.css';
+/* @import './markdown-theme/custom.css'; */
+/* @import './markdown-theme/bootstrap3.css'; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 99.9vw !important;
+  height: 100vh !important;
+  -webkit-app-region: drag;
+  user-select: none;
+  overflow: hidden;
+  position: relative;
+  color: var(--color-text);
+  overflow-x: hidden !important;
+  background: var(--color-bg);
+}
+
+.main {
+  width: calc(100% - var(--width-side-bar));
+  height: calc(100vh - var(--height-title-bar));
+  margin-bottom: calc(0 - var(--height-side-bar));
+  margin-top: var(--height-title-bar);
+  min-width: var(--width-main-min);
+  position: relative;
+  align-items: flex-start;
+  transition: width 0.5s ease-in-out;
+}
+
+.main,
+.welcome {
+  flex: 1;
+}
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--color-text-dark);
+    --color-bg: var(--color-bg-dark);
+    --color-scroll: var(--color-scrollbar-dark);
+    --color-sidebar-bg: var(--color-sidebar-bg-dark);
+    --color-sidebar: var(--color-sidebar-dark);
+    --color-file-hover-bg: var(--color-file-hover-bg-dark);
+    --color-highlight-bg: var(--color-highlight-bg-dark);
+    --color-selected-bg: var(--color-selected-bg-dark);
+    --color-file-opened-bg: var(--color-file-opened-bg-dark);
+    --color-resize-gutter: var(--color-resize-gutter-dark);
+    --color-cursor: var(--color-cursor-dark);
+    --color-selected-bg: var(--color-selected-bg-dark);
+    --color-toc-link: var(--color-toc-link-dark);
+    --color-preview-border: var(--color-preview-border-dark);
+    --color-sidebar-border: var(--color-sidebar-border-dark);
+    --color-tree-border-top: var(--color-tree-border-top-dark);
+    --color-btn-clicked: var(--color-btn-clicked-dark);
+    --color-bg-sidebar-input: var(--color-bg-sidebar-input-dark);
+    --color-dir-opened-bg: var(--color-dir-opened-bg-dark);
+    --color-btn-bg: var(--color-btn-bg-dark);
+    --color-btn-bg-hover: var(--color-btn-bg-hover-dark);
+    --color-bg-loading: var(--color-bg-loading-dark);
+    --color-bg-pdf: var(--color-bg-pdf-dark);
+  }
+  .opened::before {
+    /* background: url('../assets/images/file-fill-dark.svg') no-repeat 50% 50% !important; */
+  }
+  .dir-opened::before {
+    background: url('../assets/images/arrow-down-dark.svg') no-repeat 50% 50% !important;
+  }
+
+  .sub-dir__name::before {
+    background: url('../assets/images/arrow-right-dark.svg') 50% 50% no-repeat;
+  }
+  .editor-preview-btn {
+    background: url('../assets/images/preview-dark.svg') 50% 50% no-repeat;
+  }
+  .preview-mode {
+    background: var(--color-btn-clicked) url('../assets/images/preview-dark.svg') 50% 50% no-repeat !important;
+  }
+  .btn-doc {
+    background: url('../assets/images/doc-dark.svg') 50% 50% no-repeat;
+  }
+  .btn-search {
+    background: url('../assets/images/search-dark.svg') 50% 50% no-repeat;
+  }
+  .hide-sidebar {
+    background: url('../assets/images/union-dark.svg') 50% 50% no-repeat;
+  }
+}

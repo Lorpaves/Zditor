@@ -1,0 +1,86 @@
+{
+  "name": "Zditor",
+  "productName": "Zditor",
+  "version": "1.0.0",
+  "description": "A Modern Markdown App",
+  "main": "./src/index.js",
+  "repository": "https://github.com/Lorpaves/Zditor",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "pack": "electron-builder",
+    "packwin": "electron-builder --win",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "watch": "nodemon --exec 'electron-forge start'",
+    "build": "webpack"
+  },
+  "build": {
+    "copyright": "Copyright © 2023 year Lorpaves\nhttps://github.com/Lorpaves/Zditor",
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ],
+    "win": {
+      "icon": "./src/assets/icon/win.ico",
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities",
+      "icon": "./src/assets/icon/icon-512.icns"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 430,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Lorpaves",
+    "email": "kirass1230@163.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@electron/remote": "^2.0.9",
+    "electron-window-state": "^5.0.3",
+    "font-list": "^1.4.5",
+    "markdown-it-anchor": "^8.6.6",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "prettier": "^2.8.1",
+    "tocbot": "^4.19.0"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}

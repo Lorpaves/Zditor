@@ -1,0 +1,272 @@
+/* NOTE:编辑器容器 */
+.editor-container {
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  height: 100%;
+  background: var(--color-bg-pdf);
+  color: var(--color-text);
+  -webkit-app-region: no-drag !important;
+  flex-wrap: wrap !important;
+  user-select: auto;
+  padding: 0 !important;
+  top: 0;
+  flex: 1;
+}
+/* NOTE:Textarea元素 */
+#editor {
+  display: none;
+  width: 40%;
+  height: 100%;
+  order: 1;
+}
+
+/* NOTE:编辑器 */
+.CodeMirror {
+  -webkit-app-region: no-drag !important;
+  user-select: auto !important;
+  font-family: var(--font-editor) !important;
+  /* word-spacing: 3px !important; */
+  overflow: visible !important;
+  letter-spacing: 0.5px !important;
+  font-size: var(--font-editor-size);
+  height: 100% !important;
+  font-weight: 400;
+  display: flex;
+  /* flex: 1; */
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  padding-top: 0 !important;
+  /* background: var(--color-bg) !important; */
+  color: var(--color-text) !important;
+  background: var(--color-bg-pdf) !important;
+  width: 100%;
+  line-height: 2;
+}
+/* .CodeMirror-code {
+  gap: 1rem !important  ;
+  display: flex !important;
+  flex-direction: column !important;
+} */
+*::selection,
+::-webkit-selection {
+  /* max-width: 100% !important; */
+  background: var(--color-selected-bg) !important;
+  /* z-index: 10000 !important; */
+}
+.CodeMirror-lines {
+  width: 100% !important;
+  margin-top: 2rem !important;
+  word-wrap: break-word !important;
+  white-space: pre-line !important;
+  word-break: normal !important;
+  /* line-height: 1.5 !important; */
+}
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-lines,
+.CodeMirror-code {
+  height: 100% !important;
+  border: none !important;
+  /* max-width: var(--width-preview-max) !important; */
+}
+.CodeMirror-scroll {
+  width: 90% !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+.CodeMirror-line {
+  padding-left: 4px !important;
+  /* margin: 0.5% 0 0.5% 4px !important; */
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid var(--color-cursor) !important;
+}
+
+/* NOTE:滚动条 */
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover {
+  background: #afafaf !important;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar) !important;
+  border-radius: 10px !important;
+  width: 0.5rem !important;
+  border: none !important;
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar,
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+  border: none;
+  background: var(--color-bg);
+  width: 0.8rem !important;
+  margin-bottom: 1rem !important;
+}
+.CodeMirror-scroll::-webkit-scrollbar,
+.CodeMirror-scroll::-webkit-scrollbar-track {
+  display: none;
+}
+/* NOTE:标题 */
+.cm-header-1 {
+  /* margin: 0.67em 0 !important;
+  padding: .67em 0 1.3em 4px !important;
+  padding-bottom: 0.3em !important;
+  font-size: 2.25em !important;
+  line-height: 1.2 !important; */
+  font-size: 3.4rem;
+  font-weight: bold;
+  word-spacing: 6px !important;
+  line-height: 1.2 !important;
+}
+
+.cm-header-2 {
+  font-size: 1.5em;
+  font-size: 3rem;
+  font-weight: bold;
+  word-spacing: 6px !important;
+  line-height: 3.8rem !important;
+}
+
+.cm-header-3 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  word-spacing: 5px !important;
+  line-height: 3.4rem !important;
+}
+.cm-header-4 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  word-spacing: 4px !important;
+  line-height: 2.6rem !important;
+}
+.cm-header-5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2.2rem !important;
+}
+.cm-header-6 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.6em !important;
+}
+
+/* NOTE:代码块 */
+
+/* 每行 */
+.code-block {
+  /* background-color: var(--color-highlight-bg) !important; */
+  letter-spacing: 1px !important;
+  padding: 0 !important;
+}
+/* .code-block-header {
+  border-top-left-radius: 0.4rem !important;
+  border-top-right-radius: 0.4rem !important;
+  padding: 0.4rem 2rem 0 2rem !important;
+}
+.code-block-footer {
+  border-bottom-left-radius: 0.4rem !important;
+  border-bottom-right-radius: 0.4rem !important;
+  padding: 0 2rem 0.4rem 2rem !important;
+} */
+/* 行内元素 */
+
+.cm-comment {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 链接 */
+.cm-link,
+.cm-string .cm-url {
+}
+
+/* 粗体 */
+.cm-strong {
+  font-weight: bold;
+}
+
+.cm-variable-2 {
+  font-size: 1.8rem;
+}
+.editor-preview-box {
+  height: 100%;
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  flex: 1;
+  position: relative;
+  width: 50%;
+  word-wrap: break-word;
+  background: var(--color-bg-pdf) !important;
+
+  /* overflow-x: hidden; */
+  height: 100%;
+  order: 2;
+  display: none;
+  justify-content: center !important;
+  align-items: center !important;
+  /* border-left: 1px solid var(--color-preview-border); */
+}
+.editor-preview {
+  background: none !important;
+  width: 90%;
+  /* max-width: var(--width-preview-max); */
+  height: 100%;
+  position: relative;
+  cursor: text;
+  /* user-select: auto !important; */
+  user-select: text !important;
+  line-height: 1.6 !important;
+}
+.editor-preview::before {
+  height: 2rem;
+  content: '';
+  width: 100%;
+}
+.editor-preview::after {
+  height: 4rem;
+  content: '';
+  width: 100%;
+}
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3,
+.editor-preview h4,
+.editor-preview h5,
+.editor-preview h6,
+.editor-preview p {
+  width: 100%;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  text-align: start;
+}
+.editor-preview pre {
+  overflow-x: auto;
+}
+.search-highlight {
+  /* border: 1px solid rgb(142, 142, 142); */
+  background: #cdcdcd;
+}
+.search-highlight-current {
+  background: #fffb18;
+  padding: 0 4px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.CodeMirror .ui-resizable-e {
+  height: 100%;
+  background: var(--color-preview-border);
+  width: 3px !important;
+  position: absolute;
+  right: 0;
+  cursor: col-resize;
+  z-index: 9999999 !important;
+  -webkit-app-region: no-drag !important;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.CodeMirror .ui-resizable-e:hover {
+  opacity: 1;
+}

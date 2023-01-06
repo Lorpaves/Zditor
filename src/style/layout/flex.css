@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+}
+
+.flex-cl {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-around-end {
+  justify-content: space-around;
+}
+.start {
+  justify-content: flex-start;
+}
+.flex-1 {
+  flex: 1;
+  width: auto;
+}
+.gap-0-8 {
+  gap: 0.8rem;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.flex-end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.half {
+  width: 50%;
+}

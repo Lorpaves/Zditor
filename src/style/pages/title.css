@@ -1,0 +1,16 @@
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  align-items: center;
+  flex: 1;
+}
+.section-title-primary {
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 1px solid #cecece;
+  margin-bottom: 1rem;
+}
+.section-title-secondary {
+  font-size: 1.3rem;
+  font-weight: 400;
+}

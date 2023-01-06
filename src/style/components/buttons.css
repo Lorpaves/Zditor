@@ -1,0 +1,17 @@
+.btn {
+  width: 10rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  -webkit-app-region: no-drag;
+  border: none;
+  color: var(--color-text);
+  background: var(--color-btn-bg);
+  border-radius: 0.6rem;
+  cursor: pointer !important;
+  transition: background 0.2s ease-in-out;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background: var(--color-btn-bg-hover);
+}

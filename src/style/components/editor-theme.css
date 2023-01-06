@@ -1,0 +1,159 @@
+@media (prefers-color-scheme: light) {
+  .cm-s-zditor {
+    color-scheme: light;
+    --color-cursor: #505050;
+    --color-comment: #505050;
+    --color-atom: var(--color-text);
+    --color-number: rgb(26, 43, 118);
+    --color-property: #784d2f;
+    --color-attribute: #784d2f;
+    --color-keyword: #8d191a;
+    --color-string: #14490e;
+    --color-variable: #696969;
+    --color-variable-2: #696969;
+    --color-variable-3: #696969;
+    --color-def: #3b1a65;
+    --color-bracket: var(--color-text);
+    --color-tag: rgb(98, 13, 15);
+    --color-operator: rgb(33, 46, 96);
+    --color-builtin: #511f00;
+    --color-link: rgb(84, 84, 84);
+    --color-url: rgb(26, 43, 118);
+    --color-img-text: rgb(75, 81, 17);
+    --color-img-marker: rgb(75, 81, 17);
+    --color-matchingbracket: #74747485;
+    --color-quote: #403c3b;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .cm-s-zditor {
+    color-scheme: dark;
+    --color-cursor: #b0b0b0;
+    --color-comment: #e9e9e9;
+    --color-atom: var(--color-text);
+    --color-number: rgb(95, 112, 191);
+    --color-property: #d7b094;
+    --color-attribute: #d7b094;
+    --color-keyword: #ec7a7c;
+    --color-string: #8ad188;
+    --color-variable: #eaf3f5;
+    --color-variable-2: #eaf3f5;
+    --color-variable-3: #eaf3f5;
+    --color-def: #a180cd;
+    --color-bracket: var(--color-text);
+    --color-tag: #ec7a7c;
+    --color-operator: rgb(113, 130, 201);
+    --color-builtin: #d7b094;
+    --color-link: rgb(236, 221, 221);
+    --color-url: rgb(56, 88, 233);
+    --color-img-text: #b0b0b0;
+    --color-img-marker: #b0b0b0;
+    --color-matchingbracket: #b2b2b295;
+    --color-quote: #e9e7de;
+  }
+}
+
+.cm-s-zditor.CodeMirror {
+  /* background: var(--color-bg); */
+  color: var(--color-text);
+}
+
+.cm-s-zditor .CodeMirror-cursor {
+  border-left: 1px solid var(--color-cursor);
+}
+
+.cm-s-zditor span.cm-comment {
+  color: var(--color-comment);
+}
+.cm-s-zditor span.cm-atom {
+  color: var(--color-atom);
+}
+.cm-s-zditor span.cm-number {
+  color: var(--color-number);
+}
+
+.cm-s-zditor span.cm-property,
+.cm-s-zditor span.cm-attribute {
+  color: var(--color-property);
+}
+.cm-s-zditor span.cm-keyword {
+  color: var(--color-keyword);
+}
+.cm-s-zditor span.cm-string {
+  color: var(--color-string);
+}
+
+.cm-s-zditor span.cm-variable {
+  color: var(--color-variable) !important;
+}
+.cm-s-zditor span.cm-variable-2 {
+  color: var(--color-variable-2) !important;
+}
+.cm-s-zditor span.cm-variable-3 {
+  color: var(--color-variable-3) !important;
+}
+.cm-s-zditor span.cm-def {
+  color: var(--color-def);
+}
+.cm-s-zditor span.cm-bracket {
+  color: var(--color-bracket);
+}
+.cm-s-zditor span.cm-tag {
+  color: var(--color-tag);
+}
+.cm-s-zditor span.cm-link {
+  color: var(--color-link) !important;
+  text-decoration: none;
+}
+.cm-s-zditor span.cm-error {
+  background: #ac4142;
+  color: var(--color-attribute);
+}
+.cm-s-zditor span.cm-quote {
+  color: var(--color-quote);
+  font-style: italic;
+  font-weight: 600;
+}
+.cm-s-zditor span.cm-image-marker {
+  color: var(--color-img-marker);
+}
+.cm-s-zditor span.cm-image-alt-text {
+  color: var(--color-img-text);
+}
+
+.cm-s-zditor .CodeMirror-matchingbracket {
+  color: var(--color-cursor);
+  background-color: var(--color-matchingbracket);
+}
+.cm-s-zditor span.cm-builtin {
+  color: var(--color-builtin);
+}
+.cm-s-zditor span.cm-qualifier,
+.cm-s-zditor span.cm-keyword {
+  color: var(--color-keyword);
+}
+.cm-s-zditor span.cm-operator {
+  color: var(--color-operator);
+}
+.cm-s-zditor span.cm-number {
+  color: var(--color-number);
+}
+
+.cm-comment,
+.cm-comment.code-inline,
+.cm-builtin,
+.cm-keyword,
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-operator,
+.cm-string,
+.cm-property,
+.cm-number,
+.cm-tag,
+.cm-qualifier,
+.cm-def,
+.cm-attribute {
+  font-size: var(--font-code-size);
+  font-family: var(--font-code) !important;
+}

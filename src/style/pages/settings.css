@@ -1,0 +1,173 @@
+@import '../layout/flex.css';
+@import '../layout/scroll.css';
+@import '../animation/animation.css';
+@import './checkbox.css';
+@import './radio.css';
+@import './input.css';
+@import './title.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f5f5f581;
+  --height-title-bar: 3.5rem;
+  --width-sidebar: 40vw;
+  --color-select-bg: #f8f8f8;
+  --color-sidebar-clicked: #c3bfc6;
+  --color-text: #272727;
+  --color-sidebar-border: #cbcbcb;
+  --color-bg-sidebar: rgba(241, 241, 241, 0.177);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #2b2d309d;
+    --color-select-bg: #f8f8f8;
+    --color-sidebar-clicked: #5d5d5dca;
+    --color-text: #ededed;
+    --color-sidebar-border: #171717;
+    --color-bg-sidebar: #4747479e;
+  }
+}
+html {
+  font-size: 0.625rem;
+}
+.title-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  height: var(--height-title-bar);
+  /* background: var(--color-bg); */
+  z-index: 99;
+  /* box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(175, 175, 175, 0.369); */
+  -webkit-app-region: drag;
+  user-select: none;
+  /* box-shadow: 0px 0px 1px rgba(28, 28, 28, 0.3), 0px 1px 1px rgba(28, 28, 28, 0.3); */
+}
+body {
+  -webkit-app-region: drag;
+  /* background: var(--color-bg); */
+  user-select: none;
+  color: var(--color-text);
+}
+.side-bar-box {
+  width: var(--width-sidebar);
+  height: 100vh;
+  border-right: 1px solid var(--color-sidebar-border);
+  background: var(--color-bg-sidebar);
+}
+.side-bar {
+  margin-top: calc(var(--height-title-bar) + 2rem);
+}
+
+.side-bar__items {
+  /* margin-left: 1rem; */
+  gap: 1rem;
+}
+.side-bar__clicked {
+  background: var(--color-sidebar-clicked);
+}
+.side-bar__item {
+  list-style: none;
+  width: 80%;
+  padding: 0.6rem 0 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  position: relative;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  -webkit-app-region: no-drag;
+}
+.general {
+  gap: 0.4rem;
+}
+
+.main {
+  width: 100%;
+  background: var(--color-bg);
+}
+.main .general,
+.main .appearance,
+.main .editor,
+.main .export {
+  width: 100%;
+  gap: 1rem;
+  margin-top: calc(var(--height-title-bar) + 2rem);
+  padding: 0 2rem;
+}
+.main .general > div:not(:last-child),
+.main .appearance > div:not(:last-child),
+.main .editor > div:not(:last-child),
+.main .export > div:not(:last-child) {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #cecece;
+}
+.app-font,
+.editor-font {
+  padding-bottom: 0 !important;
+}
+.export-pdf__title {
+  padding-bottom: 1.2rem;
+}
+select {
+  padding: 0.4rem 0.4rem 0.4rem 0.3rem;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--color-select-bg);
+  -webkit-app-region: no-drag;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.launch {
+  gap: 1rem;
+}
+
+.appearance-theme {
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.appearance-theme {
+  margin: auto;
+  user-select: none;
+}
+
+.appearance-theme__select {
+  gap: 1.6rem;
+}
+.appearance-theme__text {
+  /* width: 10rem; */
+  align-items: center;
+}
+
+select[name='indent'] {
+  width: 7rem;
+}
+.editor {
+  gap: 1rem;
+}
+.select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.select-primary {
+  width: 10rem;
+}
+.select-secondary {
+  width: 15rem;
+}
+.font-size__input {
+}
+.font-size__input span {
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+}
+input {
+  -webkit-app-region: no-drag;
+}

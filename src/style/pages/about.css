@@ -1,0 +1,6 @@
+img {
+  width: 128px;
+}
+main {
+  margin-top: var(--height-title-bar);
+}

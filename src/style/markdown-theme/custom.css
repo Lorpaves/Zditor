@@ -1,0 +1,235 @@
+.editor-preview .anchor {
+  width: 0.6rem;
+  height: 0.6rem;
+  float: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0.5rem;
+  display: inline-block;
+}
+.editor-preview h1 {
+  font-size: 4.4rem;
+}
+
+.editor-preview h2 {
+  font-size: 3.8rem;
+}
+
+.editor-preview h3 {
+  font-size: 3.2rem;
+}
+
+.editor-preview h4 {
+  font-size: 2.6rem;
+}
+
+.editor-preview h5 {
+  font-size: 2.2rem;
+}
+.editor-preview h6 {
+  font-size: 1.6rem;
+}
+.editor-preview hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.editor-preview ol,
+.editor-preview ul {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.editor-preview ol li,
+.editor-preview ul li {
+  margin: 1rem 0;
+  list-style-type: disc;
+}
+.editor-preview ol li li,
+.editor-preview ul li li {
+  list-style-type: circle;
+}
+.editor-preview ol li li li,
+.editor-preview ul li li li {
+  list-style-type: square;
+}
+.editor-preview ol ol,
+.editor-preview ul ul,
+.editor-preview ol ul,
+.editor-preview ul ol {
+  margin-bottom: 0;
+}
+
+.editor-preview ul.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.editor-preview dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.editor-preview dt {
+  font-weight: 700;
+}
+
+.editor-preview dd {
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+
+.editor-preview .footnote {
+  font-size: 87.5%;
+}
+
+.editor-preview .footnote p {
+  margin: 0;
+}
+
+.editor-preview blockquote {
+  margin: 0 0 1rem;
+}
+
+.editor-preview dfn {
+  font-style: italic;
+}
+
+b,
+.editor-preview strong {
+  font-weight: bolder;
+}
+
+.editor-preview small {
+  font-size: 80%;
+}
+
+.editor-preview sub,
+.editor-preview sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.editor-preview sub {
+  bottom: -0.25em;
+}
+
+.editor-preview sup {
+  top: -0.5em;
+}
+
+.editor-preview a {
+  color: var(--accent-color);
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.editor-preview a:hover {
+  text-decoration: underline;
+}
+
+.editor-preview a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.editor-preview a:not([href]):not([tabindex]):hover,
+.editor-preview a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.editor-preview a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+.editor-preview pre,
+.editor-preview code,
+.editor-preview kbd,
+.editor-preview samp {
+  font-family: 'Operator Mono Lig', ui-monospace, monospace;
+}
+
+.editor-preview pre {
+  margin: 1rem 0;
+  overflow: auto;
+}
+
+.editor-preview code {
+  color: #e83e8c;
+  word-break: break-word;
+}
+
+.editor-preview pre,
+.editor-preview code {
+  font-size: 87.5%;
+}
+
+.editor-preview pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+.editor-preview a > code {
+  color: inherit;
+}
+
+.editor-preview img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.editor-preview mark {
+  padding: 2px 4px;
+  background-color: #fcf8e3;
+  border-radius: 4px;
+}
+
+.editor-preview .app-style-dark mark {
+  background-color: rgba(255, 255, 0, 0.8);
+  color: #000;
+}
+
+.editor-preview table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  background-color: transparent;
+  --border-color: rgba(0, 0, 0, 0.09);
+  --hover-color: rgba(0, 0, 0, 0.03);
+}
+
+.editor-preview .app-style-dark table {
+  --border-color: rgba(255, 255, 255, 0.2);
+  --hover-color: rgba(255, 255, 255, 0.03);
+}
+
+.editor-preview table th,
+.editor-preview table td {
+  padding: 0.5rem;
+  vertical-align: top;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editor-preview table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.editor-preview table tbody + tbody {
+  border-top: 2px solid var(--border-color);
+}
+
+.editor-preview table tbody tr:hover {
+  background-color: var(--hover-color);
+}

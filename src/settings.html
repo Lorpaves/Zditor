@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>settings</title>
+    <link rel="stylesheet" href="./style/pages/settings.css" />
+    <script src="./utils/jquery/jquery-3.6.2.js"></script>
+    <script src="./utils/jquery/jquery.js"></script>
+    <script src="./utils/jquery/jquery-ui.min.js"></script>
+  </head>
+  <body class="flex">
+    <!-- <div class="settings">Settings Page</div> -->
+    <aside class="side-bar-box">
+      <header class="title-bar"></header>
+      <div class="side-bar">
+        <ul class="side-bar__items flex flex-cl center">
+          <li class="side-bar__item general side-bar__clicked">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_326_2)">
+                <path
+                  d="M8.99998 16.8933C9.2078 16.8933 9.4076 16.8771 9.6234 16.8609L10.079 17.7446C10.175 17.9312 10.3427 18.0204 10.5666 17.996C10.7664 17.9555 10.9023 17.8015 10.9342 17.5906L11.0702 16.6096C11.4698 16.496 11.8615 16.3419 12.2371 16.1798L12.9565 16.8366C13.1084 16.9825 13.3002 17.0068 13.5 16.9014C13.6758 16.796 13.7478 16.6096 13.7078 16.3906L13.508 15.4258C13.8437 15.1906 14.1714 14.923 14.4671 14.6231L15.3543 14.996C15.5541 15.0852 15.746 15.0365 15.8978 14.8581C16.0338 14.7041 16.0417 14.5014 15.9298 14.3149L15.4103 13.4717C15.6501 13.1393 15.8419 12.7663 16.0258 12.3771L17.0088 12.4257C17.2166 12.4419 17.3845 12.3203 17.4564 12.1257C17.5204 11.923 17.4644 11.7284 17.2966 11.5986L16.5293 10.9825C16.6332 10.5851 16.7131 10.1717 16.7531 9.73374L17.6722 9.43382C17.88 9.36887 18 9.21486 18 8.99593C18 8.77701 17.88 8.62295 17.6722 8.54998L16.7531 8.25809C16.7131 7.82025 16.6332 7.41483 16.5293 7.00942L17.2966 6.3932C17.4564 6.26347 17.5204 6.07698 17.4564 5.87427C17.3845 5.67967 17.2166 5.55806 17.0088 5.57428L16.0258 5.6067C15.8419 5.21751 15.6501 4.86075 15.4103 4.5121L15.9298 3.66885C16.0417 3.49858 16.0258 3.29587 15.8978 3.14181C15.746 2.96343 15.5541 2.92289 15.3543 3.00397L14.4671 3.36884C14.1714 3.07695 13.8437 2.80127 13.508 2.56613L13.7078 1.60936C13.7558 1.38233 13.6758 1.19584 13.5 1.09854C13.3002 0.985035 13.1084 1.00935 12.9565 1.16342L12.2371 1.81207C11.8615 1.64179 11.4698 1.50396 11.0702 1.38233L10.9342 0.40935C10.9023 0.198536 10.7584 0.0444807 10.5586 0.00393976C10.3427 -0.0203848 10.167 0.0688054 10.079 0.247185L9.6234 1.13098C9.4076 1.11476 9.2078 1.10665 8.99998 1.10665C8.78418 1.10665 8.59235 1.11476 8.37654 1.13098L7.91295 0.247185C7.82503 0.0688054 7.64919 -0.0203848 7.43338 0.00393976C7.23356 0.0444807 7.08969 0.198536 7.06571 0.40935L6.92184 1.38233C6.5222 1.50396 6.13853 1.63369 5.75487 1.81207L5.03552 1.16342C4.88365 1.00935 4.69182 0.993144 4.492 1.09854C4.31615 1.19584 4.23622 1.38233 4.28419 1.60936L4.484 2.56613C4.1563 2.80127 3.8206 3.07695 3.52486 3.36884L2.63765 3.00397C2.43783 2.92289 2.254 2.96343 2.10213 3.14181C1.96625 3.29587 1.95026 3.49858 2.06217 3.66885L2.5817 4.5121C2.3499 4.86075 2.15009 5.21751 1.96625 5.6067L0.991114 5.57428C0.783302 5.55806 0.607459 5.67967 0.535523 5.87427C0.47158 6.07698 0.535523 6.26347 0.69538 6.3932L1.4627 7.00942C1.35879 7.41483 1.27886 7.82025 1.25488 8.24998L0.319715 8.54998C0.1119 8.62295 0 8.77701 0 8.99593C0 9.21486 0.1119 9.36887 0.319715 9.43382L1.25488 9.73374C1.27886 10.1717 1.35879 10.5851 1.4627 10.9825L0.69538 11.5986C0.535523 11.7203 0.479573 11.9149 0.535523 12.1257C0.607459 12.3203 0.783302 12.4419 0.991114 12.4257L1.96625 12.3771C2.15009 12.7663 2.3499 13.1393 2.5817 13.4717L2.06217 14.3149C1.95026 14.5014 1.96625 14.7041 2.10213 14.8581C2.254 15.0365 2.43783 15.0852 2.63765 14.996L3.52486 14.6231C3.8206 14.923 4.1563 15.1906 4.484 15.4258L4.28419 16.3906C4.24422 16.6096 4.31615 16.796 4.492 16.9014C4.69182 17.0068 4.88365 16.9825 5.03552 16.8366L5.75487 16.1798C6.13853 16.3419 6.5222 16.496 6.92184 16.6096L7.06571 17.5906C7.08969 17.8015 7.23356 17.9555 7.43338 17.996C7.64919 18.0204 7.81704 17.9312 7.91295 17.7446L8.37654 16.8609C8.58435 16.8771 8.78418 16.8933 8.99998 16.8933ZM8.99998 15.6689C5.33924 15.6689 2.50977 12.7013 2.50977 9.00404C2.50977 5.29859 5.33924 2.33099 8.99998 2.33099C12.6607 2.33099 15.4902 5.29859 15.4902 9.00404C15.4902 12.7013 12.6607 15.6689 8.99998 15.6689ZM7.60123 7.66618L8.48844 7.09861L5.77885 2.39585L4.85967 2.92289L7.60123 7.66618ZM10.8543 9.51482H16.2496L16.2416 8.4689H10.8543V9.51482ZM8.49643 10.9175L7.61722 10.3338L4.77974 15.0447L5.69093 15.5879L8.49643 10.9175ZM8.984 11.1365C10.1349 11.1365 11.0702 10.1878 11.0702 9.01215C11.0702 7.83646 10.1349 6.8878 8.984 6.8878C7.82503 6.8878 6.88986 7.83646 6.88986 9.01215C6.88986 10.1878 7.82503 11.1365 8.984 11.1365ZM8.984 9.99325C8.43249 9.99325 8.01686 9.56353 8.01686 9.01215C8.01686 8.46079 8.43249 8.03105 8.984 8.03105C9.52755 8.03105 9.94315 8.46079 9.94315 9.01215C9.94315 9.56353 9.52755 9.99325 8.984 9.99325Z"
+                  fill="var(--color-text)"
+                  fill-opacity="0.85"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_326_2">
+                  <rect width="18" height="18" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span class="side-bar__item-text">General</span>
+          </li>
+          <li class="side-bar__item appearance">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_347_6)">
+                <path
+                  d="M5.57896 14.8433C5.71126 14.8433 5.80682 14.7462 5.82887 14.6043C6.06409 12.6107 6.15964 12.5585 8.15895 12.23C8.31331 12.2001 8.40887 12.1254 8.40887 11.9762C8.40887 11.8343 8.31331 11.7447 8.18835 11.7222C6.17434 11.334 6.06409 11.3415 5.82887 9.34794C5.80682 9.20607 5.71126 9.10906 5.57896 9.10906C5.4393 9.10906 5.34375 9.20607 5.32904 9.34047C5.07178 11.3639 5.00562 11.4311 2.96956 11.7222C2.84461 11.7372 2.74905 11.8343 2.74905 11.9762C2.74905 12.1179 2.84461 12.2001 2.96956 12.23C5.00562 12.6257 5.06443 12.6257 5.32904 14.6192C5.34375 14.7462 5.4393 14.8433 5.57896 14.8433ZM2.08751 8.33998C2.19042 8.33998 2.24922 8.26532 2.27127 8.16825C2.52119 6.74963 2.52854 6.66004 4.00597 6.40618C4.10153 6.38378 4.17503 6.32405 4.17503 6.21952C4.17503 6.11499 4.10153 6.04779 4.00597 6.03286C2.52854 5.77154 2.52119 5.68194 2.27127 4.26332C2.24922 4.16626 2.19042 4.09906 2.08751 4.09906C1.98461 4.09906 1.9258 4.16626 1.90376 4.26332C1.65384 5.68194 1.64649 5.77154 0.169059 6.03286C0.073504 6.04779 0 6.11499 0 6.21952C0 6.32405 0.073504 6.38378 0.169059 6.40618C1.64649 6.66004 1.65384 6.74963 1.90376 8.16825C1.9258 8.26532 1.98461 8.33998 2.08751 8.33998ZM6.11554 3.56148C6.20374 3.56148 6.24784 3.50921 6.26254 3.42708C6.51246 2.23246 6.49776 2.18766 7.73262 1.9338C7.81348 1.91887 7.87229 1.86661 7.87229 1.78448C7.87229 1.69488 7.81348 1.64261 7.73262 1.62768C6.49776 1.37382 6.51246 1.32902 6.26254 0.141862C6.24784 0.0597313 6.20374 0 6.11554 0C6.02733 0 5.98323 0.0597313 5.96853 0.141862C5.71861 1.32902 5.73332 1.37382 4.49845 1.62768C4.4176 1.64261 4.35879 1.69488 4.35879 1.78448C4.35879 1.86661 4.4176 1.91887 4.49845 1.9338C5.73332 2.18766 5.71861 2.23246 5.96853 3.42708C5.98323 3.50921 6.02733 3.56148 6.11554 3.56148ZM12.187 6.19712C12.2899 6.19712 12.3487 6.12992 12.3707 6.03286C12.6206 4.61424 12.628 4.52464 14.1054 4.26332C14.2084 4.24839 14.2745 4.18119 14.2745 4.07666C14.2745 3.97213 14.2084 3.9124 14.1054 3.89C12.628 3.63614 12.6206 3.54654 12.3707 2.12792C12.3487 2.03086 12.2899 1.9562 12.187 1.9562C12.084 1.9562 12.0253 2.03086 12.0032 2.12792C11.7533 3.54654 11.7459 3.63614 10.2685 3.89C10.173 3.9124 10.0995 3.97213 10.0995 4.07666C10.0995 4.18119 10.173 4.24839 10.2685 4.26332C11.7459 4.52464 11.7533 4.61424 12.0032 6.03286C12.0253 6.12992 12.084 6.19712 12.187 6.19712ZM14.642 14.7237C14.9508 15.0449 15.48 15.0449 15.7739 14.7237C16.0754 14.3952 16.0754 13.8876 15.7739 13.5739L8.78371 6.45098C8.47503 6.13739 7.94579 6.13739 7.65177 6.45098C7.34305 6.7795 7.3504 7.29468 7.65177 7.60827L14.642 14.7237ZM10.3641 9.5943L8.2104 7.39921C8.07809 7.26482 8.034 7.11549 8.1663 6.98856C8.27655 6.8691 8.43095 6.89896 8.57053 7.04083L10.7316 9.23598L10.3641 9.5943Z"
+                  fill="var(--color-text)"
+                  fill-opacity="0.85"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_347_6">
+                  <rect width="16" height="15" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="side-bar__item-text">Appearance</span>
+          </li>
+          <li class="side-bar__item editor">
+            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_349_13)">
+                <path
+                  d="M0.331229 9.52449C0.72348 9.90946 1.51552 10.0056 2.12653 9.46529C2.3302 9.28766 2.75262 8.84349 3.55976 8.05148C7.41438 4.21715 9.95649 1.7004 10.4996 2.18155C10.9371 2.55906 9.60194 4.40961 8.33466 6.12691C5.95852 9.37643 4.06516 11.6267 5.46821 13.0036C6.59216 14.1065 8.3422 12.9961 11.0351 10.6792C12.5513 9.36911 13.6904 8.31056 14.0223 8.64363C14.2712 8.88054 13.8865 9.50975 13.3208 10.472C12.5891 11.7007 11.6763 13.0184 12.5513 13.877C13.1548 14.4617 14.324 14.2101 15.7648 12.8259C16.0213 12.5742 16.0816 12.2929 15.878 12.093C15.6818 11.908 15.4103 11.9377 15.2066 12.1227C14.1581 13.1294 13.4717 13.4476 13.2981 13.27C13.0945 13.0776 13.4641 12.4188 14.2335 11.0938C15.2066 9.4209 15.7271 8.36978 14.9049 7.58514C13.8035 6.53403 12.4986 7.65917 10.0847 9.73917C7.81417 11.7007 7.15036 12.019 6.86372 11.7451C6.47901 11.3602 7.06738 10.6792 9.60949 7.19282C11.9856 3.92846 13.366 1.89286 12.0761 0.6715C10.3186 -1.0088 8.05555 0.316195 1.85497 6.33417C1.03275 7.13361 0.580158 7.55554 0.399118 7.74799C-0.181714 8.37717 -0.0610218 9.1396 0.331229 9.52449Z"
+                  fill="var(--color-text)"
+                  fill-opacity="0.85"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_349_13">
+                  <rect width="16" height="15" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span class="side-bar__item-text">Editor</span>
+          </li>
+          <li class="side-bar__item export">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_351_17)">
+                <path
+                  d="M2.11981 13.1991H2.27998V9.14345C2.27998 8.08505 2.90419 7.45295 3.92501 7.45295H12.0781C13.1005 7.45295 13.7247 8.08505 13.7247 9.14345V13.1991H13.8818C15.2718 13.1991 16 12.4772 16 11.0533V5.09515C16 3.67287 15.2718 2.94937 13.8818 2.94937H2.11981C0.803747 2.94937 0 3.67287 0 5.09515V11.0533C0 12.4772 0.735779 13.1991 2.11981 13.1991ZM2.81789 1.97326H13.1837V1.84616C13.1837 0.77179 12.3651 0.281395 11.208 0.281395H4.7921C3.68931 0.281395 2.81789 0.77179 2.81789 1.84616V1.97326ZM3.25279 15.0174C3.25279 15.6076 3.63615 16 4.21042 16H11.7927C12.367 16 12.7503 15.6076 12.7503 15.0174V9.14345C12.7503 8.72244 12.4802 8.44646 12.0781 8.44646H3.92501C3.52442 8.44646 3.25279 8.72244 3.25279 9.14345V15.0174ZM5.68572 11.3815C5.41805 11.3815 5.22449 11.1733 5.22449 10.9091C5.22449 10.6511 5.41805 10.4445 5.68572 10.4445H10.334C10.5926 10.4445 10.7953 10.6511 10.7953 10.9091C10.7953 11.1733 10.5926 11.3815 10.334 11.3815H5.68572ZM5.68572 14.0019C5.41805 14.0019 5.22449 13.8015 5.22449 13.5451C5.22449 13.2716 5.41805 13.0649 5.68572 13.0649H10.334C10.5926 13.0649 10.7953 13.2716 10.7953 13.5451C10.7953 13.8015 10.5926 14.0019 10.334 14.0019H5.68572ZM11.4628 5.36608C11.4628 4.85874 11.8809 4.42915 12.3868 4.42915C12.8789 4.42915 13.2969 4.85874 13.2969 5.36608C13.2969 5.88435 12.8789 6.3 12.3868 6.3046C11.8809 6.30919 11.4628 5.89685 11.4628 5.36608Z"
+                  fill="var(--color-text)"
+                  fill-opacity="0.85"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_351_17">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="side-bar__item-text">Export</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="general-box flex flex-cl">
+        <div class="general flex flex-cl">
+          <div class="launch flex">
+            <span class="launch__title section-title flex-1"> On Launch</span>
+            <select class="launch__selector select-secondary select" name="on-launch" id="launch">
+              <option value="Open new file">Open new file</option>
+              <option value="Restore last closed folder">Restore last closed folder</option>
+              <option value="Open custom folder">Open custom folder</option>
+            </select>
+          </div>
+          <div class="preview flex">
+            <span class="preview__title section-title">Preview</span>
+            <select name="preview__selector" class="preview__selector select-secondary select">
+              <option value="half" selected>Half screen</option>
+              <option value="full">Full screen</option>
+            </select>
+          </div>
+          <div class="sidebar flex">
+            <span class="sidebar__title section-title">Show sidebar on launch</span>
+            <label class="toggler-wrapper style-1">
+              <input name="show-sidebar" type="checkbox" class="sidebar__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="appearance-box flex flex-cl hidden">
+        <div class="appearance flex flex-cl">
+          <div class="appearance-theme flex">
+            <span class="appearance-theme__text section-title flex">Color Theme</span>
+            <div class="flex appearance-theme__select">
+              <label class="radio-label" for="theme-dark">
+                <input type="radio" id="theme-dark" name="app-theme" value="light" />
+                <span class="radio"></span>
+                <span>Light</span>
+              </label>
+              <label class="radio-label" for="theme-light">
+                <input type="radio" id="theme-light" name="app-theme" value="dark" />
+                <span class="radio"></span>
+                <span>Dark</span>
+              </label>
+              <label class="radio-label" for="theme-sys">
+                <input type="radio" id="theme-sys" name="app-theme" value="system" checked />
+                <span class="radio"></span>
+                <span>System</span>
+              </label>
+            </div>
+          </div>
+          <div class="editor-theme flex">
+            <span class="editor-theme__text section-title">Editor Theme</span>
+            <select class="select-primary select editor-theme__selector" name="editor-theme" id="editor-theme">
+              <option value="zditor" selected>zditor-default</option>
+              <option value="default">default</option>
+              <option value="3024-day">3024-day</option>
+              <option value="3024-night">3024-night</option>
+              <option value="abbott">abbott</option>
+              <option value="abcdef">abcdef</option>
+              <option value="ambiance-mobile">ambiance-mobile</option>
+              <option value="ambiance">ambiance</option>
+              <option value="ayu-dark">ayu-dark</option>
+              <option value="ayu-mirage">ayu-mirage</option>
+              <option value="base16-dark">base16-dark</option>
+              <option value="base16-light">base16-light</option>
+              <option value="bespin">bespin</option>
+              <option value="blackboard">blackboard</option>
+              <option value="cobalt">cobalt</option>
+              <option value="codemirror">codemirror</option>
+              <option value="colorforth">colorforth</option>
+              <option value="darcula">darcula</option>
+              <option value="dialog">dialog</option>
+              <option value="dracula">dracula</option>
+              <option value="duotone-dark">duotone-dark</option>
+              <option value="duotone-light">duotone-light</option>
+              <option value="eclipse">eclipse</option>
+              <option value="elegant">elegant</option>
+              <option value="erlang-dark">erlang-dark</option>
+              <option value="gruvbox-dark">gruvbox-dark</option>
+              <option value="hopscotch">hopscotch</option>
+              <option value="icecoder">icecoder</option>
+              <option value="idea">idea</option>
+              <option value="isotope">isotope</option>
+              <option value="juejin">juejin</option>
+              <option value="lesser-dark">lesser-dark</option>
+              <option value="liquibyte">liquibyte</option>
+              <option value="lucario">lucario</option>
+              <option value="material-darker">material-darker</option>
+              <option value="material-ocean">material-ocean</option>
+              <option value="material-palenight">material-palenight</option>
+              <option value="material">material</option>
+              <option value="mbo">mbo</option>
+              <option value="mdn-like">mdn-like</option>
+              <option value="midnight">midnight</option>
+              <option value="monokai">monokai</option>
+              <option value="moxer">moxer</option>
+              <option value="neat">neat</option>
+              <option value="neo">neo</option>
+              <option value="night">night</option>
+              <option value="nord">nord</option>
+              <option value="oceanic-next">oceanic-next</option>
+              <option value="panda-syntax">panda-syntax</option>
+              <option value="paraiso-dark">paraiso-dark</option>
+              <option value="paraiso-light">paraiso-light</option>
+              <option value="pastel-on-dark">pastel-on-dark</option>
+              <option value="railscasts">railscasts</option>
+              <option value="rubyblue">rubyblue</option>
+              <option value="seti">seti</option>
+              <option value="shadowfox">shadowfox</option>
+              <option value="solarized">solarized</option>
+              <option value="ssms">ssms</option>
+              <option value="the-matrix">the-matrix</option>
+              <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+              <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+              <option value="ttcn">ttcn</option>
+              <option value="twilight">twilight</option>
+              <option value="vibrant-ink">vibrant-ink</option>
+              <option value="xq-dark">xq-dark</option>
+              <option value="xq-light">xq-light</option>
+              <option value="yeti">yeti</option>
+              <option value="yonce">yonce</option>
+              <option value="zenburn">zenburn</option>
+            </select>
+          </div>
+          <div class="app-font">
+            <div class="font-family flex">
+              <span class="app-font-family__title section-title flex-1 flex">App Font</span>
+              <select class="app-font__selector select-primary select" name="app-font-family" id=""></select>
+            </div>
+            <div class="font-size flex">
+              <span class="app-font-size__title section-title flex-1 flex">Font Size</span>
+              <div class="font-size__input">
+                <input
+                  name="app-font-size"
+                  class="app-font-size__input input input-primary"
+                  type="number"
+                  value="16"
+                /><span>px</span>
+              </div>
+            </div>
+          </div>
+          <div class="editor-font">
+            <div class="font-family flex">
+              <span class="editor-font-family__title section-title flex-1 flex">Editor Font</span>
+              <select class="editor-font__selector select-primary select" name="editor-font-family" id=""></select>
+            </div>
+            <div class="font-size flex">
+              <span class="editor-font-size__title section-title flex-1 flex">Font Size</span>
+              <div class="font-size__input">
+                <input
+                  name="editor-font-size"
+                  class="editor-font-size__input input input-primary"
+                  type="number"
+                  value="16"
+                /><span>px</span>
+              </div>
+            </div>
+          </div>
+          <div class="editor-code-font">
+            <div class="font-family flex">
+              <span class="editor-font-family__title section-title flex-1 flex">Code Block Font</span>
+              <select class="editor-code-font__selector select-primary select" name="editor-code-font-family"></select>
+            </div>
+            <div class="editor-code-font-size flex">
+              <span class="editor-code-font-size__title section-title flex-1 flex">Code Block Font Size</span>
+              <div class="font-size__input">
+                <input
+                  name="editor-code-font-size"
+                  class="editor-code-font-size__input input input-primary"
+                  type="number"
+                  value="14"
+                /><span>px</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor-box flex hidden">
+        <div class="editor flex flex-cl">
+          <div class="indent flex">
+            <span class="indent__title section-title">Indent Size</span>
+            <select name="indent" class="indent__selector">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="auto-save flex center">
+            <span class="auto-save__title section-title">Auto Save</span>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" name="auto-save" checked class="auto-save__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+          <div class="format-when-open flex center">
+            <span class="format-when-open__title section-title">Format Doc When Open</span>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" name="format-when-open" class="format-when-open__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+          <div class="format-when-save flex center">
+            <span class="format-save__title section-title">Format When Save</span>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" name="format-when-save" class="format-when-save__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+          <div class="match-brackets flex center">
+            <span class="match-brackets__title section-title">Match Brackets</span>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" name="match-brackets" checked class="match-brackets__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+          <div class="auto-close-brackets flex center">
+            <span class="auto-close-brackets__title section-title">Auto Close Brackets</span>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" name="auto-close-brackets" checked class="auto-close-brackets__checkbox" />
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+          </div>
+          <div class="cursor-height flex center">
+            <span class="cursor-height__title section-title">Cursor Height</span>
+            <input
+              name="cursor-height"
+              class="cursor-height__input input input-primary"
+              checked
+              type="number"
+              value="1"
+              step="0.1"
+              min="0.1"
+              max="2"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="export-box flex hidden">
+        <div class="export">
+          <div class="export-pdf flex flex-cl gap-1">
+            <span class="export-pdf__title section-title-primary flex">PDF</span>
+            <div class="flex">
+              <span class="export-pdf-margins-type__title section-title">Margin</span>
+              <select name="export-pdf-margins-type" class="export-pdf-margins-type">
+                <option selected value="0">Default Margin</option>
+                <option value="1">No Margin</option>
+                <option value="2">Minimum Margin</option>
+              </select>
+            </div>
+            <div class="flex">
+              <span class="export-pdf-page__title section-title">Type</span>
+              <select name="export-pdf-page-type" class="export-pdf-page-type">
+                <option value="landscape">Landscape</option>
+                <option selected value="portrait">Portrait</option>
+              </select>
+            </div>
+            <div class="flex">
+              <span class="export-pdf-background__title section-title">Include Background</span>
+              <label class="toggler-wrapper style-1">
+                <input type="checkbox" name="export-pdf-background" class="export-pdf-background__checkbox" />
+                <div class="toggler-slider">
+                  <div class="toggler-knob"></div>
+                </div>
+              </label>
+            </div>
+
+            <div class="flex flex-cl gap-0-8">
+              <div class="flex">
+                <span class="export-pdf-page-size__title section-title">Page Size</span>
+                <select name="export-pdf-page-size" class="export-pdf-page-size">
+                  <option value="A3">A3</option>
+                  <option selected value="A4">A4</option>
+                  <option value="A5">A5</option>
+                  <option value="Legal">Legal</option>
+                  <option value="Letter">Letter</option>
+                  <option value="Tabloid">Tabloid</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+
+              <div class="export-pdf-size-custom__inputs flex flex-cl flex-end hidden">
+                <div class="export-pdf-size-custom__input">
+                  <span class="section-title-secondary">Width: </span>
+                  <input
+                    class="input input-accent export-pdf-size-custom-width"
+                    name="export-pdf-size-width"
+                    type="number"
+                    value="600"
+                  />
+                </div>
+                <div class="export-pdf-size-custom__input">
+                  <span class="section-title-secondary">Height: </span>
+                  <input
+                    class="input input-accent export-pdf-size-custom-height"
+                    name="export-pdf-size-height"
+                    type="number"
+                    value="600"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./app/components/settings.js"></script>
+    <script></script>
+  </body>
+</html>

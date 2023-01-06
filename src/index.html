@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/index.css" />
+    <script src="./utils/jquery/jquery-3.6.2.js"></script>
+    <script src="./utils/jquery/jquery.js"></script>
+    <script src="./utils/jquery/jquery-ui.min.js"></script>
+
+    <script src="./utils/codemirror/codemirror.js"></script>
+    <script src="./utils/dist/codemirror/addon.bundle.min.js"></script>
+    <script src="./utils/dist/codemirror/mode.bundle.min.js"></script>
+    <script src="./utils/dist/codemirror/edit.bundle.min.js"></script>
+    <script src="./utils/dom/global.js"></script>
+    <title>Zditor</title>
+  </head>
+  <body class="flex center">
+    <div class="title-bar"></div>
+
+    <div class="sidebar flex flex-cl">
+      <header class="sidebar__header flex space-around-end">
+        <span class="tree-toolbar__btn flex center btn-doc">
+          <!-- <img ondragstart="return false" src="./assets/images/doc.svg" alt="open-dir" -->
+        </span>
+        <span class="sidebar__header-text flex center">Articles</span>
+        <span class="tree-toolbar__btn flex center btn-search">
+          <!-- <img ondragstart="return false" src="./assets/images/search.svg" alt="open-file.svg" -->
+        </span>
+      </header>
+      <aside class="toc-box flex center hidden"><div class="toc scroll" id="toc"></div></aside>
+      <aside class="tree scroll"></aside>
+    </div>
+
+    <div class="welcome flex center flex-cl">
+      <div class="welcome-right">
+        <div>
+          <button class="btn open-file" onclick="api.openFile()">打开文件</button>
+          <button class="btn open-dir" onclick="api.openDir()">打开文件夹</button>
+          <button class="btn new-file" onclick="api.newFile()">新的文件</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main flex center hidden flex-cl">
+      <div class="main__title-bar">
+        <span class="title-bar__title flex center"> </span>
+        <span class="hide-sidebar"></span>
+        <span class="editor-preview-btn flex center"> </span>
+      </div>
+
+      <div class="search-box flex center flex-cl hidden">
+        <div class="search flex center">
+          <div class="search-left">
+            <div class="search__options-fake flex">
+              <div class="search__options-box flex center">
+                <div class="search__options-inner">
+                  <span class="search__options-placeholder"
+                    ><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_361_22)">
+                        <path
+                          d="M7.29571 15.9923H8.70432C9.10242 15.9923 9.39334 15.7552 9.47757 15.3649L9.87563 13.6815C10.1742 13.5821 10.4651 13.4673 10.7177 13.3448L12.1953 14.2477C12.5244 14.4543 12.8996 14.4238 13.1752 14.1483L14.1627 13.1689C14.4383 12.8934 14.4766 12.4954 14.2545 12.1664L13.3512 10.7049C13.4813 10.4371 13.5962 10.1617 13.6805 9.88622L15.3799 9.4806C15.7704 9.3965 16 9.10572 16 8.70785V7.32282C16 6.93258 15.7704 6.64181 15.3799 6.55764L13.6957 6.15209C13.5962 5.83836 13.4738 5.55525 13.3665 5.31804L14.2699 3.83358C14.4842 3.50455 14.4612 3.12961 14.178 2.85414L13.1752 1.86705C12.8919 1.60689 12.5551 1.56098 12.2182 1.75228L10.7177 2.67815C10.4727 2.54807 10.1895 2.43329 9.87563 2.33381L9.47757 0.627452C9.39334 0.237208 9.10242 0 8.70432 0H7.29571C6.89763 0 6.60671 0.237208 6.51484 0.627452L6.11676 2.31852C5.8182 2.41798 5.52728 2.53276 5.267 2.67049L3.78183 1.75228C3.44499 1.56098 3.10048 1.59923 2.81724 1.86705L1.82202 2.85414C1.53876 3.12961 1.50814 3.50455 1.73015 3.83358L2.62584 5.31804C2.52632 5.55525 2.40384 5.83836 2.30431 6.15209L0.620097 6.55764C0.229666 6.64181 0 6.93258 0 7.32282V8.70785C0 9.10572 0.229666 9.3965 0.620097 9.4806L2.31963 9.88622C2.40384 10.1617 2.51866 10.4371 2.64116 10.7049L1.74546 12.1664C1.51579 12.4954 1.56173 12.8934 1.83733 13.1689L2.81724 14.1483C3.09283 14.4238 3.4756 14.4543 3.80479 14.2477L5.27465 13.3448C5.53494 13.4673 5.8182 13.5821 6.11676 13.6815L6.51484 15.3649C6.60671 15.7552 6.89763 15.9923 7.29571 15.9923ZM8.00002 10.6973C6.51485 10.6973 5.29762 9.47303 5.29762 7.98853C5.29762 6.51173 6.51485 5.29508 8.00002 5.29508C9.48515 5.29508 10.7024 6.51173 10.7024 7.98853C10.7024 9.47303 9.48515 10.6973 8.00002 10.6973Z"
+                          fill="var(--color-svg)"
+                          fill-opacity="0.85"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_361_22">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <span class="flex center search-svg"
+                ><span class="flex center">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line
+                      x1="1.41421"
+                      y1="1"
+                      x2="5"
+                      y2="4.58579"
+                      stroke="var(--color-svg)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="5"
+                      y1="4.58579"
+                      x2="8.58579"
+                      y2="1"
+                      stroke="var(--color-svg)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+
+            <select name="search__options" id="search__options" class="search__options">
+              <option value="f">Find</option>
+              <option value="r">Replace</option>
+            </select>
+          </div>
+          <span class="search__input-box flex">
+            <svg
+              class="input-search-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_370_26)">
+                <path
+                  d="M0 6.47137C0 10.0396 2.93142 12.9427 6.5343 12.9427C7.95907 12.9427 9.26102 12.4887 10.3337 11.7263L14.3623 15.7243C14.5507 15.9108 14.7963 16 15.0584 16C15.6151 16 16 15.5865 16 15.0431C16 14.7836 15.9018 14.5484 15.7298 14.3781L11.7257 10.3883C12.5691 9.30162 13.0686 7.9473 13.0686 6.47137C13.0686 2.90319 10.1372 0 6.5343 0C2.93142 0 0 2.90319 0 6.47137ZM1.40021 6.47137C1.40021 3.66549 3.70114 1.38672 6.5343 1.38672C9.36748 1.38672 11.6684 3.66549 11.6684 6.47137C11.6684 9.27727 9.36748 11.556 6.5343 11.556C3.70114 11.556 1.40021 9.27727 1.40021 6.47137Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_370_26">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <input type="text" class="search__input" autofocus />
+          </span>
+        </div>
+        <div class="replace flex hidden">
+          <input type="text" class="replace__input" />
+          <div class="replace__btns flex">
+            <button class="replace-btn replace__btn">替换</button>
+            <button class="replace-all-btn replace__btn">全部替换</button>
+            <button class="replace-undo-btn replace__btn">取消替换</button>
+          </div>
+        </div>
+      </div>
+      <!-- TODO: 增加侧边栏隐藏 -->
+      <div class="editor-container flex center">
+        <textarea id="editor" contenteditable="true" spellcheck="false"> </textarea>
+
+        <div class="editor-preview-box border-left flex center scroll-primary">
+          <div class="editor-preview scroll-primary" id="editor-preview"></div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay loading hidden">
+      <div class="spinner center">
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+        <div class="spinner-blade"></div>
+      </div>
+    </div>
+    <script id="render" src="./render.js"></script>
+  </body>
+</html>

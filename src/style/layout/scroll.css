@@ -1,0 +1,41 @@
+.scroll::-webkit-scrollbar {
+  /* background: var(--color-sidebar-bg); */
+  width: 0.6rem;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  width: 0.5rem;
+  border: none;
+  border-radius: 5rem;
+}
+.scroll:hover.scroll::-webkit-scrollbar {
+  display: block;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #afafaf;
+}
+.show::-webkit-scrollbar {
+  display: block !important;
+}
+.scroll-primary::-webkit-scrollbar {
+  /* background: var(--color-bg); */
+  width: 0.6rem;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+.scroll-primary::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  width: 0.5rem;
+  border: none;
+  border-radius: 5rem;
+}
+.scroll-primary::-webkit-scrollbar-thumb:hover {
+  background: #afafaf;
+}
+.scroll-primary:hover::-webkit-scrollbar {
+  display: block;
+}

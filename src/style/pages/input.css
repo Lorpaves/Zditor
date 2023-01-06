@@ -1,0 +1,26 @@
+.input {
+  /* width: 100%; */
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.input-primary {
+  width: 6rem;
+}
+.input-accent {
+  width: 6rem;
+  margin: 4px 0;
+}
+.input[type='text']:focus,
+.input[type='number']:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  /* box-shadow: 1px 1px 1px dodgerBlue, 1px 1px 1px dodgerBlue; */
+}
+.input-secondary {
+  width: 10rem;
+}

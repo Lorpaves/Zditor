@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generator: Apple Native CoreSVG 175.5-->
+<!DOCTYPE svg
+        PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id='arrow' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6.68555"
+     height="11.874">
+    <g>
+        <rect height="11.874" opacity="0" width="6.68555" x="0" y="0"/>
+        <path d="M6.68555 5.93359C6.68555 5.7627 6.61719 5.60547 6.4873 5.48242L1.07324 0.177734C0.950195 0.0615234 0.799805 0 0.62207 0C0.273438 0 0 0.266602 0 0.62207C0 0.792969 0.0683594 0.950195 0.177734 1.06641L5.1543 5.93359L0.177734 10.8008C0.0683594 10.917 0 11.0674 0 11.2451C0 11.6006 0.273438 11.8672 0.62207 11.8672C0.799805 11.8672 0.950195 11.8057 1.07324 11.6826L6.4873 6.38477C6.61719 6.25488 6.68555 6.10449 6.68555 5.93359Z"
+              fill="#ededed" fill-opacity="0.85"/>
+    </g>
+</svg>
