@@ -12,7 +12,7 @@ module.exports = class Zditor {
   createZditor() {
     this.mainWindow.webContents.loadFile(`${this.state.App.getAppPath()}/src/index.html`);
 
-    // this.mainWindow.webContents.openDevTools();
+    this.mainWindow.webContents.openDevTools();
     this.mainWindow.webContents.on('did-finish-load', (e, args) => {
       this.menu.Menu.setApplicationMenu(this.menu.ZditorMenu);
       this.state.winState.manage(this.mainWindow);

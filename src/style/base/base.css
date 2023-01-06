@@ -55,7 +55,9 @@
   --color-resize-gutter: var(--color-resize-gutter-light);
   --color-resize-gutter-light: rgba(94, 94, 94, 0.711);
   --color-resize-gutter-dark: rgba(14, 14, 14, 0.641);
-
+  --color-search-highlight: var(--color-search-highlight-light);
+  --color-search-highlight-light: #cdcdcd;
+  --color-search-highlight-dark: #6d6d6da8;
   --color-cursor: var(--color-cursor-light);
   --color-cursor-light: #505050;
   --color-cursor-dark: #7a7a7a;

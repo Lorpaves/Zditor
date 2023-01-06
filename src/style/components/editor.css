@@ -247,10 +247,10 @@
 }
 .search-highlight {
   /* border: 1px solid rgb(142, 142, 142); */
-  background: #cdcdcd;
+  background: var(--color-search-highlight);
 }
 .search-highlight-current {
-  background: #fffb18;
+  background: #fffb18a4;
   padding: 0 4px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.4);
 }

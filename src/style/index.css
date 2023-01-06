@@ -79,10 +79,9 @@ body {
     --color-btn-bg-hover: var(--color-btn-bg-hover-dark);
     --color-bg-loading: var(--color-bg-loading-dark);
     --color-bg-pdf: var(--color-bg-pdf-dark);
+    --color-search-highlight: var(--color-search-highlight-dark);
   }
-  .opened::before {
-    /* background: url('../assets/images/file-fill-dark.svg') no-repeat 50% 50% !important; */
-  }
+
   .dir-opened::before {
     background: url('../assets/images/arrow-down-dark.svg') no-repeat 50% 50% !important;
   }
